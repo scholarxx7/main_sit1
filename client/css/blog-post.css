@@ -1,0 +1,137 @@
+/* Blog Post Page Styles - Unparalleled Scholar */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+.prose {
+    max-width: 65ch;
+    line-height: 1.75;
+}
+
+.prose h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.prose h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #334155;
+}
+
+.prose p {
+    margin-bottom: 1.25rem;
+    color: #475569;
+}
+
+.prose ul,
+.prose ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+}
+
+.prose li {
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+.prose strong {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.prose blockquote {
+    border-left: 4px solid #4f46e5;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #64748b;
+}
+
+/* Reading Progress Bar */
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* Share Buttons */
+.share-btn {
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Author Bio */
+.author-bio {
+    background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 100%);
+}
+
+/* Related Posts */
+.related-post-card {
+    transition: all 0.3s ease;
+}
+
+.related-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table of Contents */
+.toc {
+    position: sticky;
+    top: 100px;
+}
+
+.toc-link {
+    transition: all 0.2s ease;
+}
+
+.toc-link:hover {
+    color: #4f46e5;
+    padding-left: 0.5rem;
+}
+
+/* Code Blocks */
+.prose pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.prose code {
+    background: #f1f5f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    color: #e11d48;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .prose h2 {
+        font-size: 1.5rem;
+    }
+
+    .prose h3 {
+        font-size: 1.25rem;
+    }
+}

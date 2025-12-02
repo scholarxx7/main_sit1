@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Read the latest insights, tips, and trends in education, technology, and career development from Unparalleled Scholar.">
+    <meta name="keywords" content="education blog, learning tips, career advice, technology trends, skill development">
+    <meta name="author" content="Srijan Kumar | Srijanxi Technologies">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unparalleledscholar.com/blog">
+    <meta property="og:title" content="Blog | Unparalleled Scholar">
+    <meta property="og:description" content="Insights, tips, and trends in education and career development.">
+    <meta property="og:image" content="../../client/img/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://unparalleledscholar.com/blog">
+    <meta property="twitter:title" content="Blog | Unparalleled Scholar">
+    <meta property="twitter:description" content="Insights, tips, and trends in education and career development.">
+    <meta property="twitter:image" content="../../client/img/logo.png">
+
+    <title>Blog | Unparalleled Scholar</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../client/css/index.css">
+    <div id="reading-progress"></div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+                <!-- Logo -->
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <img src="../../client/img/logo.png" alt="Unparalleled Scholar Logo"
+                            class="h-10 w-10 object-contain">
+                        <span class="text-xl sm:text-2xl font-extrabold text-indigo-900 tracking-tight">Unparalleled
+                            Scholar</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        aria-expanded="false">
+                        <span class="sr-only">Open menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-10">
+                    <a href="../index.html"
+                        class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        Home
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html"
+                        class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        About
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="courses.html"
+                        class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        Courses
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="blog.html"
+                        class="text-base font-medium text-indigo-600 transition duration-150 ease-in-out relative group">
+                        Blog
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600"></span>
+                    </a>
+                    <a href="contact.html"
+                        class="text-base font-medium text-gray-700 hover:text-indigo-600 transition duration-150 ease-in-out relative group">
+                        Contact
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../index.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">Home</a>
+                    <a href="about.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">About</a>
+                    <a href="courses.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">Courses</a>
+                    <a href="blog.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50 transition duration-150">Blog</a>
+                    <a href="contact.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition duration-150">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="relative pt-20 pb-32 bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1440 320"
+                    preserveAspectRatio="none">
+                    <path fill="currentColor"
+                        d="M0,192L80,186.7C160,181,320,171,480,165.3C640,160,800,160,960,160C1120,160,1280,160,1360,160L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6" data-aos="fade-down">
+                        Our Blog
+                    </h1>
+                    <p class="mt-4 max-w-3xl mx-auto text-xl sm:text-2xl text-teal-300 leading-relaxed"
+                        data-aos="fade-up" data-aos-delay="200">
+                        Insights, tips, and trends in education, technology, and career development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section class="py-8 bg-white border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button
+                        class="category-badge px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition">
+                        All Posts
+                    </button>
+                    <button
+                        class="category-badge px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-gray-300 transition">
+                        Education
+                    </button>
+                    <button
+                        class="category-badge px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-gray-300 transition">
+                        Technology
+                    </button>
+                    <button
+                        class="category-badge px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-gray-300 transition">
+                        Career Tips
+                    </button>
+                    <button
+                        class="category-badge px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-semibold hover:bg-gray-300 transition">
+                        Student Success
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Post -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-extrabold text-gray-900">Featured Post</h2>
+                </div>
+
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-2xl overflow-hidden"
+                    data-aos="fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div
+                            class="relative h-64 lg:h-auto bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white opacity-50" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <span
+                                    class="px-4 py-1 bg-indigo-600 text-white text-sm font-semibold rounded-full">Education</span>
+                                <span class="text-sm text-gray-500">5 min read</span>
+                            </div>
+                            <h3 class="text-3xl font-extrabold text-gray-900 mb-4">
+                                The Future of Online Learning: Trends to Watch in 2025
+                            </h3>
+                            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                                Discover how AI, personalized learning paths, and immersive technologies are reshaping
+                                the education landscape. Learn what these changes mean for students and educators alike.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                                        SK
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-semibold text-gray-900">Srijan Kumar</p>
+                                        <p class="text-xs text-gray-500">Nov 28, 2024</p>
+                                    </div>
+                                </div>
+                                <a href="blog-post.html?id=1"
+                                    class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition transform hover:scale-105">
+                                    Read More
+                                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-extrabold text-gray-900">Latest Articles</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+                        <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white opacity-50" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span
+                                    class="px-3 py-1 bg-teal-100 text-teal-700 text-xs font-semibold rounded-full">Technology</span>
+                                <span class="text-xs text-gray-500">4 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-indigo-600 transition">
+                                <a href="blog-post.html?id=2">How AI is Personalizing Education for Every Student</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Explore how artificial intelligence is creating customized learning experiences that
+                                adapt to individual student needs and learning styles.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                                        PR
+                                    </div>
+                                    <span class="text-sm text-gray-700">Priya Reddy</span>
+                                </div>
+                                <span class="text-xs text-gray-500">Nov 25, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div
+                            class="h-48 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white opacity-50" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span
+                                    class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded-full">Career
+                                    Tips</span>
+                                <span class="text-xs text-gray-500">6 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-indigo-600 transition">
+                                <a href="blog-post.html?id=3">5 In-Demand Skills Every Professional Needs in 2025</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Stay ahead of the curve with these essential skills that employers are actively seeking
+                                in today's rapidly evolving job market.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                                        AM
+                                    </div>
+                                    <span class="text-sm text-gray-700">Arjun Mehta</span>
+                                </div>
+                                <span class="text-xs text-gray-500">Nov 22, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white opacity-50" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span
+                                    class="px-3 py-1 bg-pink-100 text-pink-700 text-xs font-semibold rounded-full">Student
+                                    Success</span>
+                                <span class="text-xs text-gray-500">5 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-indigo-600 transition">
+                                <a href="blog-post.html?id=4">From Zero to Hero: Success Stories of Career
+                                    Transformation</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Read inspiring stories of students who completely transformed their careers through
+                                dedication, learning, and the right guidance.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                                        SK
+                                    </div>
+                                    <span class="text-sm text-gray-700">Srijan Kumar</span>
+                                </div>
+                                <span class="text-xs text-gray-500">Nov 20, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4 -->
+                    <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white opacity-50" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Technology</span>
+                                <span class="text-xs text-gray-500">7 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-indigo-600 transition">
+                                <a href="blog-post.html?id=5">The Complete Guide to Learning Web Development in 2025</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                A comprehensive roadmap for aspiring web developers, covering essential technologies,
+                                best practices, and career paths.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                                        PR
+                                    </div>
+                                    <span class="text-sm text-gray-700">Priya Reddy</span>
+                                </div>
+                                <span class="text-xs text-gray-500">Nov 18, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 5 -->
+                    <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div
+                            class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white opacity-50" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span
+                                    class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Education</span>
+                                <span class="text-xs text-gray-500">5 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-indigo-600 transition">
+                                <a href="blog-post.html?id=6">Effective Study Techniques Backed by Science</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Discover evidence-based study methods that can dramatically improve your learning
+                                efficiency and retention.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                                        AM
+                                    </div>
+                                    <span class="text-sm text-gray-700">Arjun Mehta</span>
+                                </div>
+                                <span class="text-xs text-gray-500">Nov 15, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 6 -->
+                    <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white opacity-50" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span
+                                    class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">Career
+                                    Tips</span>
+                                <span class="text-xs text-gray-500">6 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-indigo-600 transition">
+                                <a href="blog-post.html?id=7">Building a Strong Professional Network in the Digital
+                                    Age</a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Learn strategies to build meaningful professional connections that can accelerate your
+                                career growth in today's digital world.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                                <div class="flex items-center space-x-2">
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                                        SK
+                                    </div>
+                                    <span class="text-sm text-gray-700">Srijan Kumar</span>
+                                </div>
+                                <span class="text-xs text-gray-500">Nov 12, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-12 flex justify-center">
+                    <nav class="flex items-center space-x-2">
+                        <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300 transition">
+                            Previous
+                        </button>
+                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg font-semibold">1</button>
+                        <button
+                            class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">2</button>
+                        <button
+                            class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">3</button>
+                        <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                            Next
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="py-16 bg-gradient-to-r from-indigo-600 to-purple-600">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-white mb-4" data-aos="fade-up">
+                    Never Miss an Update
+                </h2>
+                <p class="text-xl text-indigo-100 mb-8" data-aos="fade-up" data-aos-delay="100">
+                    Subscribe to our newsletter for the latest insights, tips, and educational content.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <input type="email" placeholder="Enter your email" required
+                        class="flex-1 px-6 py-3 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit"
+                        class="px-8 py-3 bg-white text-indigo-600 font-bold rounded-lg hover:bg-gray-100 transition transform hover:scale-105">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 mt-0 py-16 border-t border-indigo-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Logo and Description -->
+                <div class="space-y-4">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <img src="../../client/img/logo.png" alt="Unparalleled Scholar Logo"
+                            class="h-10 w-10 object-contain brightness-110">
+                        <span class="text-xl font-bold text-white tracking-tight">Unparalleled Scholar</span>
+                    </a>
+                    <p class="text-sm text-indigo-300 leading-relaxed">
+                        Pioneering purpose-driven education through innovation, accessibility, and future-ready
+                        solutions.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="text-indigo-300 hover:text-teal-400 transition">Home</a></li>
+                        <li><a href="about.html" class="text-indigo-300 hover:text-teal-400 transition">About Us</a>
+                        </li>
+                        <li><a href="courses.html" class="text-indigo-300 hover:text-teal-400 transition">Courses</a>
+                        </li>
+                        <li><a href="blog.html" class="text-indigo-300 hover:text-teal-400 transition">Blog</a></li>
+                        <li><a href="contact.html" class="text-indigo-300 hover:text-teal-400 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us Section -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-white">Contact Us</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-teal-400 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-white">Email:</span>
+                                <a href="mailto:scholarxx7@gmail.com"
+                                    class="text-indigo-300 hover:text-teal-400 transition">scholarxx7@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 mb-8 pb-8 border-b border-indigo-800">
+                <a href="https://www.linkedin.com/company/unparalleled-scholar/" target="_blank"
+                    rel="noopener noreferrer" class="text-indigo-300 hover:text-teal-400 transition duration-300"
+                    aria-label="LinkedIn">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="text-center">
+                <p class="text-sm text-indigo-300">
+                    Copyright ©2025 All rights reserved | Unparalleled Scholar built by <a
+                        href="https://srijanxi.netlify.app/" target="_blank" rel="noopener noreferrer"
+                        class="text-teal-400 font-semibold hover:text-teal-300 transition">Srijan Kumar</a> |
+                    <a href="https://www.linkedin.com/company/srijanxi-technologies/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-teal-400 font-semibold hover:text-teal-300 transition">Srijanxi Technologies</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="uil uil-arrow-up"></i>
+    </button>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    </body>
+
+</html>

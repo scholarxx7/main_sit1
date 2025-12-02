@@ -1,0 +1,71 @@
+/* About Page Styles - Unparalleled Scholar */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, #312e81 0%, #4c1d95 100%);
+    min-height: 400px;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Core Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.2);
+}
+
+/* Timeline Styles */
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: #4f46e5;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

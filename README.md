@@ -8,7 +8,7 @@
 **Unlocking Potential Through Purpose-Driven Education**
 
 [![Status](https://img.shields.io/badge/Status-Production_Ready-success)]()
-[![Version](https://img.shields.io/badge/Version-1.0.0-blue)]()
+[![Version](https://img.shields.io/badge/Version-1.1.0-blue)]()
 [![License](https://img.shields.io/badge/License-All_Rights_Reserved-red)]()
 
 **Project Code Name:** `US.V1`
@@ -48,6 +48,7 @@ http://localhost:3000
 
 ### Current Features
 - ✅ **Dynamic Course Catalog** - Browse and filter courses
+- ✅ **Professional Services** - Content Writing, Technical Writing, Ghost Writing, Coaching, Project Consulting
 - ✅ **Contact System** - Submit inquiries
 - ✅ **Testimonials Section** - Student success stories with ratings
 - ✅ **RESTful API** - 18 endpoints for data management
@@ -274,12 +275,18 @@ The `docs/` folder contains detailed technical documentation:
 
 ---
 
-## � Recent Updates
+## 📋 Recent Updates
 
-**Version:** 1.0.0  
-**Last Updated:** October 25, 2025
+**Version:** 1.1.0  
+**Last Updated:** December 3, 2025
 
-### Latest Changes
+### Latest Changes (v1.1.0)
+- ✅ Added Professional Services section with 5 services
+- ✅ Updated navigation menu (desktop & mobile) with Services link
+- ✅ Optimized Vercel configuration for free plan deployment
+- ✅ Enhanced section layout and styling consistency
+
+### Previous Updates (v1.0.0)
 - ✅ Added Testimonials Section with star ratings and success stories
 - ✅ Implemented mobile-responsive hamburger menu
 - ✅ Enhanced SEO with meta tags and Open Graph
